@@ -1,0 +1,36 @@
+.section {
+    color: white;
+    text-align: justify;
+    padding: 20px 20px;
+    height: 500px;
+}
+
+.hero {
+    background-color: #2a9d8f;
+
+}
+
+.about {
+    background-color: #264653;
+}
+
+.skill {
+    background-color: #e9c46a;
+    height:auto;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    margin: auto;
+    text-align: justify;
+}
