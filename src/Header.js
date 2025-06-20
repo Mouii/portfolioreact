@@ -1,5 +1,5 @@
 import "./Header.css";
-import ImageHeader from "./images/head.jpg";
+import ImageHeader from "./images/stickman_laying.webp";
 
 function Header() {
     return (
