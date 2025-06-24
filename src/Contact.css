@@ -56,3 +56,59 @@
 p {
     text-align: center;
 }
+
+.contact-flex-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  background-color: #f8f9fb;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.form-center {
+  max-width: 600px;
+  flex: 1;
+  z-index: 2;
+}
+
+.side-image {
+  max-width: 280px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.side-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.25));
+}
+
+/* Mobile: shift images behind the form slightly faded */
+@media (max-width: 768px) {
+  .contact-flex-wrapper {
+    flex-direction: column;
+  }
+
+  .side-image {
+    position: absolute;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+
+  .side-image.left {
+    top: 30px;
+    left: 10px;
+    max-width: 60%;
+  }
+
+  .side-image.right {
+    bottom: 30px;
+    right: 10px;
+    max-width: 30%;
+  }
+}

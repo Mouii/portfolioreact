@@ -1,6 +1,8 @@
 import "./Contact.css";
 import {useState} from "react";
 import emailjs from "@emailjs/browser";
+import SonicContact from "./images/sonic_contact.png";
+import RobotnikContact from "./images/robotnik_contact.png";
 
 function Contact() {
 
@@ -71,64 +73,78 @@ function Contact() {
     <h1>Wanna contact me?</h1>
     <p>Leave me a message here and I will answer you when I can! :)</p>
 
-    <form className="contact-form" onSubmit={handleSubmit} noValidate>
-      <label htmlFor="name">Your Name</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        maxLength={maxField}
-        placeholder="Jane Doe"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
-      {errors.name && <small className="error">{errors.name}</small>}
+    <div class="contact-flex-wrapper">
 
-      <label htmlFor="email">Email Address</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        maxLength={maxField}
-        placeholder="you@example.com"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-      {errors.email && <small className="error">{errors.email}</small>}
-
-      <label htmlFor="subject">Subject</label>
-      <input
-        type="text"
-        id="subject"
-        name="subject"
-        maxLength={maxField}
-        placeholder="Let's work together!"
-        value={formData.subject}
-        onChange={handleChange}
-        required
-      />
-      {errors.subject && <small className="error">{errors.subject}</small>}
-
-      <label htmlFor="message">Message</label>
-      <textarea
-        id="message"
-        name="message"
-        rows="5"
-        maxLength={maxChars}
-        placeholder="Write your message here..."
-        value={formData.message}
-        onChange={handleChange}
-        required
-      />
-      <div className="char-count">
-        {charCount} / {maxChars} characters
+      <div className="side-image left">
+        <img src={RobotnikContact} alt="Robotnik pointing" />
       </div>
-      {errors.message && <small className="error">{errors.message}</small>}
 
-      <button type="submit">Send Message</button>
-    </form>
+      <div class="form-center">
+        <form className="contact-form" onSubmit={handleSubmit} noValidate>
+          <label htmlFor="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            maxLength={maxField}
+            placeholder="Jane Doe"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          {errors.name && <small className="error">{errors.name}</small>}
+
+          <label htmlFor="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            maxLength={maxField}
+            placeholder="you@example.com"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          {errors.email && <small className="error">{errors.email}</small>}
+
+          <label htmlFor="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            maxLength={maxField}
+            placeholder="Let's work together!"
+            value={formData.subject}
+            onChange={handleChange}
+            required
+          />
+          {errors.subject && <small className="error">{errors.subject}</small>}
+
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            maxLength={maxChars}
+            placeholder="Write your message here..."
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+          <div className="char-count">
+            {charCount} / {maxChars} characters
+          </div>
+          {errors.message && <small className="error">{errors.message}</small>}
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div className="side-image right">
+        <img src={SonicContact} alt="Sonic pointing" />
+      </div>
+
+    </div>
   </div>
   );
 }
