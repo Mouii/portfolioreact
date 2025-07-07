@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import SonicContact from "./images/sonic_contact.png";
 import RobotnikContact from "./images/robotnik_contact.png";
 
-function Contact() {
+const Contact = () => {
 
   const [formData, setFormData] = useState({
     name: "",

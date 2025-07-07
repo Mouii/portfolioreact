@@ -3,11 +3,9 @@
   flex-direction: column;
   gap: 16px;
   max-width: 600px;
-  margin: 40px auto;
-  padding: 24px;
-  background: #f8f9fa;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .contact-form label {
@@ -61,11 +59,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
   min-height: 100vh;
-  background-color: #f8f9fb;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 10px;
   position: relative;
 }
 
@@ -76,7 +71,7 @@ p {
 }
 
 .side-image {
-  max-width: 280px;
+  max-width: 200px;
   flex-shrink: 0;
   z-index: 1;
 }
@@ -103,7 +98,7 @@ p {
   .side-image.left {
     top: 30px;
     left: 10px;
-    max-width: 60%;
+    max-width: 30%;
   }
 
   .side-image.right {

@@ -1,13 +1,16 @@
-import "./Home.css";
+import "./About.css";
 import { motion } from "framer-motion";
 import ImageHero from "./images/stickman_showing.webp";
 import ImageAbout from "./images/stickman_cooperation.webp";
 import ImageSkill from "./images/stickman_contact.webp";
+import Navbar from "./Navbar";
+import Header from "./Header";
 
-function Home() {
+function About() {
     return (
         <div>
-            
+            <Header />
+            <Navbar />
                 <div class="section hero">
                     <motion.div 
                         initial={{ opacity: 0, x: -1000 }}
@@ -93,4 +96,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default About;
