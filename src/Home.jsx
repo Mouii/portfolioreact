@@ -5,6 +5,7 @@ import "./Home.css";
 import Projects from "./Projects";
 import About from "./About";
 import Contact from "./Contact";
+import { Tooltip } from 'react-tooltip'
 
 const Home = () => {
 
@@ -39,10 +40,14 @@ const Home = () => {
 
     return (
         <div className="wrapper">
-            <img src={ImageBackground} alt="background" className="background" />
-            <div className="highlight firecamp" title="Fire Camp" onClick={() => setOpenScroll("about")}/>
-            <div className="highlight table" title="Projects" onClick={() => setOpenScroll("projects")}/>
-            <div className="highlight beds" title="Beds" onClick={() => setOpenScroll("contact")}/>
+            <div className="welcome-banner">
+                👋 Welcome to my website, visitor. Check the campfire, the table, or the beds to make an action...
+            </div>
+            <img src={ImageBackground} alt="background" className="background" />   
+            <div className="highlight firecamp" onClick={() => setOpenScroll("about")} data-tooltip-id="my-tooltip" data-tooltip-content="Who am I?"/>
+            <div className="highlight table" title="Projects" onClick={() => setOpenScroll("projects")} data-tooltip-id="my-tooltip" data-tooltip-content="Projects"/>
+            <div className="highlight beds" title="Beds" onClick={() => setOpenScroll("contact")} data-tooltip-id="my-tooltip" data-tooltip-content="Wanna contact me?"/>
+            <Tooltip id="my-tooltip" />
             
             {openScroll && (
                 <div className="scroll-overlay">

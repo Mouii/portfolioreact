@@ -1,63 +1,21 @@
 import "./About.css";
-import { motion } from "framer-motion";
-import ImageHero from "./images/stickman_showing.webp";
-import ImageAbout from "./images/stickman_cooperation.webp";
-import ImageSkill from "./images/stickman_contact.webp";
-import Navbar from "./Navbar";
-import Header from "./Header";
 
 function About() {
     return (
         <div>
-            <Header />
-            <Navbar />
-                <div class="section hero">
-                    <motion.div 
-                        initial={{ opacity: 0, x: -1000 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, amount: 0.1 }}
-                        transition={{ duration: 1.5, ease: "easeInOut" }}
-                    >
-                        <h1>1st section</h1>
-                        <h2>Passer de l'imaginaire à la réalité.</h2>
-                        <p>Je suis un ingénieur développeur logiciel dans le monde de l'informatique depuis mes 6 ans! Ayant toujours voulu passer derrière l'écran pour faire rêver les utilisateurs, j'ai orienté ma vie vers ce secteur!
-                        Dans cette optique, il est important de comprendre les besoins de la population pour concevoir des sites webs, des applications à leur image. Mes services et optiques vous intéressent? Prenez contact avec moi! Que ce soit pour me connaître, me poser des questions, vous n'avez aucun risque de pris!</p>
-                    </motion.div  >
-                    <img class="imgClass" src={ImageHero} alt="was supposed to have" />
-                </div>
-            
-            
-            
-            <div class="section about">
-                <motion.div 
-                initial={{ opacity: 0, x: 1000 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-                >
-                    <h1>2ème section</h1>
-                    <h2>Mon parcours et philosophie</h2>
-                    <p>À travers tout mon parcours académique et professionnel, j'ai pu exercer dans de multiples domaines et maîtriser plusieurs langagues et technologies.
+            <h1>Passer de l'imaginaire à la réalité.</h1>
+                <p>
+                    Je suis un ingénieur développeur logiciel dans le monde de l'informatique depuis mes 6 ans! Ayant toujours voulu passer derrière l'écran pour faire rêver les utilisateurs, j'ai orienté ma vie vers ce secteur!
+                    Dans cette optique, il est important de comprendre les besoins de la population pour concevoir des sites webs, des applications à leur image. Mes services et optiques vous intéressent? Prenez contact avec moi! Que ce soit pour me connaître, me poser des questions, vous n'avez aucun risque de pris!
+                </p>                        
+            <h1>Ma philosophie</h1>
+                <p>
+                    À travers tout mon parcours académique et professionnel, j'ai pu exercer dans de multiples domaines et maîtriser plusieurs langagues et technologies.
                     Aujourd'hui, je peux assumer pouvoir concevoir n'importe quel type de besoin technique que ce soit un site web jusqu'à l'application mobile. Un langage et un framework ne sont qu'une manière de communiquer et s'organiser tels une panoplie d'outils pour un forgeron.
-                    Comprendre et aboutir au besoin d'un client, maximiser la valeur de son produit, le rendre fonctionnel et robuste, telle est ma philosophie.</p>
-                </motion.div>
-                <img class="imgClass" src={ImageAbout} alt="was supposed to have" />
-            </div>
-           
-
-            
-            <div class="section skill">
-                <motion.div 
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-                
-            >
-                <h1>3ème section</h1>
-                <h2>Points majeurs</h2>
+                    Comprendre et aboutir au besoin d'un client, maximiser la valeur de son produit, le rendre fonctionnel et robuste, telle est ma philosophie.
+                </p>
+            <h1>Points majeurs</h1>
                 <ul>
-
                     <li>
                     <h3>Analyse du besoin client</h3>
                     <p>Il est important de mettre en lumière ce que veut comme application et comme fonctionnalités l'utilisateur final!</p>
@@ -88,10 +46,7 @@ function About() {
                     <p>Se répartir les tâches; déléguer une partie de son travail; l'ordonnancer pour aboutir à sa finalité; l'organisation est une clé pour concevoir avec succès une application en tout genre! Combiner avec une forte commmunication avec le client ou les coéquipiers, le résultat ne peut qu'aboutir à une finalité positive.</p>
                     </li>
 
-                </ul>
-                </motion.div>
-                <img class="imgClass" src={ImageSkill} alt="was supposed to have" />
-            </div>        
+                </ul>    
         </div>
     );
 }
