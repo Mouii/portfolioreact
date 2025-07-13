@@ -1,13 +1,19 @@
-import {React, useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import ImageBackground from "./images/background.webp";
 import ImageSeal from "./images/seal.webp";
 import "./Home.css";
 import Projects from "./Projects";
 import About from "./About";
 import Contact from "./Contact";
-import { Tooltip } from 'react-tooltip'
+import Header from "./Header";
+import Footer from "./Footer";
+import { Tooltip } from 'react-tooltip';
+import { useTranslation } from "react-i18next";
+
 
 const Home = () => {
+
+    const { t } = useTranslation();
 
     const [openScroll, setOpenScroll] = useState(null);
     const [isClosing, setIsClosing] = useState(false);
@@ -40,13 +46,13 @@ const Home = () => {
 
     return (
         <div className="wrapper">
-            <div className="welcome-banner">
-                👋 Welcome to my website, visitor. Check the campfire, the table, or the beds to make an action...
-            </div>
+            
+            <Header />
+            
             <img src={ImageBackground} alt="background" className="background" />   
-            <div className="highlight firecamp" onClick={() => setOpenScroll("about")} data-tooltip-id="my-tooltip" data-tooltip-content="Who am I?"/>
-            <div className="highlight table" title="Projects" onClick={() => setOpenScroll("projects")} data-tooltip-id="my-tooltip" data-tooltip-content="Projects"/>
-            <div className="highlight beds" title="Beds" onClick={() => setOpenScroll("contact")} data-tooltip-id="my-tooltip" data-tooltip-content="Wanna contact me?"/>
+            <div className="highlight firecamp" onClick={() => setOpenScroll("about")} data-tooltip-id="my-tooltip" data-tooltip-content={t("about")}/>
+            <div className="highlight table" onClick={() => setOpenScroll("projects")} data-tooltip-id="my-tooltip" data-tooltip-content={t("projects")}/>
+            <div className="highlight beds" onClick={() => setOpenScroll("contact")} data-tooltip-id="my-tooltip" data-tooltip-content={t("contact")}/>
             <Tooltip id="my-tooltip" />
             
             {openScroll && (
@@ -68,6 +74,8 @@ const Home = () => {
                     )}
                 </div>
             )}
+
+            <Footer />
 
         </div>
     );

@@ -1,0 +1,21 @@
+.flag-switcher {
+    position: absolute;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 16px;
+    right: 0;
+}
+
+.flag {
+    width: 32px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.flag:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}

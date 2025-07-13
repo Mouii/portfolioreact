@@ -3,6 +3,7 @@
   top: 0; 
   left: 0;
   height: 100vh;
+  width : 165vh;
   background: rgba(0,0,0,0.85);
   display: flex;
   align-items: center;
@@ -36,3 +37,21 @@
 .lightbox-btn.right { right: 20px; }
 
 .lightbox-btn:hover { background: #eee; }
+
+.title {
+    font-size: 40px;
+    text-align: center;
+    padding : 30px 0px;
+    font-weight: bold;
+}
+
+.type {
+  font-size: 25px;
+  font-style: italic;
+}
+
+.text {
+    font-size: 18px;
+    margin: auto;
+    text-align: justify;
+}

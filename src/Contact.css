@@ -51,7 +51,7 @@
   margin-bottom: 8px;
 }
 
-p {
+.tip {
     text-align: center;
 }
 
@@ -74,6 +74,11 @@ p {
   max-width: 200px;
   flex-shrink: 0;
   z-index: 1;
+
+  &.secondo {
+    margin-left: -28px;;
+  }
+
 }
 
 .side-image img {
@@ -81,29 +86,4 @@ p {
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.25));
-}
-
-/* Mobile: shift images behind the form slightly faded */
-@media (max-width: 768px) {
-  .contact-flex-wrapper {
-    flex-direction: column;
-  }
-
-  .side-image {
-    position: absolute;
-    opacity: 0.06;
-    pointer-events: none;
-  }
-
-  .side-image.left {
-    top: 30px;
-    left: 10px;
-    max-width: 30%;
-  }
-
-  .side-image.right {
-    bottom: 30px;
-    right: 10px;
-    max-width: 30%;
-  }
 }
