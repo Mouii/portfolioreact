@@ -7,7 +7,7 @@
   color: #f5f5f5;
   padding: 10px 20px;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 20px;
   font-family: Georgia, serif;
   z-index: 10000;
   pointer-events: none; /* avoid blocking clicks */
