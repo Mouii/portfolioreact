@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.4a54256d.css",
-    "main.js": "/static/js/main.319647e2.js",
+    "main.css": "/static/css/main.c75b1090.css",
+    "main.js": "/static/js/main.41f9987b.js",
     "static/js/488.6738d8a3.chunk.js": "/static/js/488.6738d8a3.chunk.js",
+    "static/media/nature.mp3": "/static/media/nature.b804fa246d384e7fbd01.mp3",
     "static/media/left_contact.webp": "/static/media/left_contact.3a1e5213c92095a886a8.webp",
     "static/media/background.webp": "/static/media/background.65eeddf27136b7d46e07.webp",
     "static/media/lg_kotlin_select.webp": "/static/media/lg_kotlin_select.3bd66ab6efc360c05099.webp",
@@ -31,18 +32,19 @@
     "static/media/acacia_original.webp": "/static/media/acacia_original.d727de0a6ad26eac6e3a.webp",
     "static/media/portfolio_about.webp": "/static/media/portfolio_about.3cfcd72bf4becf782f2c.webp",
     "static/media/portfolio_contact.webp": "/static/media/portfolio_contact.7c4747e27ebc55633fb0.webp",
+    "static/media/parchment.mp3": "/static/media/parchment.0fb4380f3c69389cbabb.mp3",
     "static/media/hanoi_basic.webp": "/static/media/hanoi_basic.431c71fb56ffd2b13319.webp",
     "static/media/hanoi_survival.webp": "/static/media/hanoi_survival.9d83eb5cefecd5c3c268.webp",
     "static/media/hanoi_menu.webp": "/static/media/hanoi_menu.482234e8bf67e33801c1.webp",
     "static/media/english.webp": "/static/media/english.3f382a8e19d40e625bb5.webp",
     "static/media/french.webp": "/static/media/french.ca99bc430df709517253.webp",
     "index.html": "/index.html",
-    "main.4a54256d.css.map": "/static/css/main.4a54256d.css.map",
-    "main.319647e2.js.map": "/static/js/main.319647e2.js.map",
+    "main.c75b1090.css.map": "/static/css/main.c75b1090.css.map",
+    "main.41f9987b.js.map": "/static/js/main.41f9987b.js.map",
     "488.6738d8a3.chunk.js.map": "/static/js/488.6738d8a3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a54256d.css",
-    "static/js/main.319647e2.js"
+    "static/css/main.c75b1090.css",
+    "static/js/main.41f9987b.js"
   ]
 }

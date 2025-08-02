@@ -99,6 +99,7 @@ body.modal-open {
     max-height: 78vh; /* Adjust based on your visual preference */
     padding-right: 110px; /* Space for scrollbar */
     padding-left: 110px;
+    z-index: 10;
 }
 
 .scroll-content::-webkit-scrollbar {
