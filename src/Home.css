@@ -1,7 +1,6 @@
 .wrapper {
     position: relative;
-    width: 100%;
-    max-width: 100vw;
+    width: inherit;
 }
 
 .background {
@@ -185,6 +184,7 @@ body.modal-open {
   }
   100% {
     transform: translate(-50%, 800%) scale(1);
+    display: none;
   }
 }
 
