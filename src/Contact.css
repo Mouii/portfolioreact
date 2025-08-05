@@ -72,7 +72,8 @@
   z-index: 1;
 
   &.secondo {
-    margin-left: -28px;;
+    margin-left: -36px;
+    scale: 0.9;
   }
 
 }

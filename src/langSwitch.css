@@ -19,3 +19,18 @@
     transform: scale(1.1);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+    .flag-switcher {
+        margin-top: 10px;
+        right: 0;
+        scale: 0.6;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    .flag-switcher {
+        right: 0;
+        scale: 0.7;
+    }
+}
