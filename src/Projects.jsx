@@ -117,42 +117,42 @@ function Projects() {
     <div>
       <div>
         <div className="title">{t("projectIntro")}</div>
-        <p>{t("projectTips")}</p>
+        <div className="ProjectText">{t("projectTips")}</div>
       </div>
       <div>
         <div className="title">{t("sopraTitle")}</div>
         <div className="type">{t("projectTypePro")}</div>
         <Carousel_image images={AcaciaGaminImages} onImageClick={openZoom}/>
-        <p>{t("sopraDescription")}</p>
-        <h3>{t("projectStatement")} {t("projectStatementOngoing")}</h3>
+        <div className="ProjectText">{t("sopraDescription")}</div>
+        <div className="stateProject">{t("projectStatement")} {t("projectStatementOngoing")}</div>
       </div>
       <div>
         <div className="title">{t("hanoiTitle")}</div>
         <div className="type">{t("projectTypeInterview")}</div>
         <Carousel_image images={HanoiImages} onImageClick={openZoom}/>
-        <p>{t("hanoiDescription")}</p>
-        <h3>{t("projectStatement")} {t("projectStatementCompleted")}</h3>
+        <div className="ProjectText">{t("hanoiDescription")}</div>
+        <div className="stateProject">{t("projectStatement")} {t("projectStatementCompleted")}</div>
       </div>
       <div>
         <div className="title">{t("werewolfAngularTitle")}</div>
         <div className="type">{t("projectTypePersonal")}</div>
         <Carousel_image images={WereWolveAngularImages} onImageClick={openZoom}/>
-        <p>{t("werewolfAngularDescription")}</p>
-        <h3>{t("projectStatement")} {t("projectStatementCompleted")}</h3>
+        <div className="ProjectText">{t("werewolfAngularDescription")}</div>
+        <div className="stateProject">{t("projectStatement")} {t("projectStatementCompleted")}</div>
       </div>
       <div>
         <div className="title">{t("werewolfKotlinTitle")}</div>
         <div className="type">{t("projectTypePersonal")}</div>
         <Carousel_image images={WerewolveKotlinImages} onImageClick={openZoom}/>
-        <p>{t("werewolfKotlinDescription")}</p>
-        <h3>{t("projectStatement")} {t("projectStatementCompleted")}</h3>
+        <div className="ProjectText">{t("werewolfKotlinDescription")}</div>
+        <div className="stateProject">{t("projectStatement")} {t("projectStatementCompleted")}</div>
       </div>
       <div>
         <div className="title">{t("portfolioTitle")}</div>
         <div className="type">{t("projectTypePersonal")}</div>
         <Carousel_image images={PortfolioImages} onImageClick={openZoom}/>
-        <p>{t("portfolioDescription")}</p>
-        <h3>{t("projectStatement")} {t("projectStatementOngoing")}</h3>
+        <div className="ProjectText">{t("portfolioDescription")}</div>
+        <div className="stateProject">{t("projectStatement")} {t("projectStatementOngoing")}</div>
       </div>
       
       <AnimatePresence>

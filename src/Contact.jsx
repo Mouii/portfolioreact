@@ -72,8 +72,8 @@ const Contact = () => {
 
   return (
   <div>
-    <h1>{t("contactQuestion")}</h1>
-    <div className="tip">{t("contactTips")}</div>
+    <div className="title">{t("contactQuestion")}</div>
+    <div className="text">{t("contactTips")}</div>
 
     <div class="contact-flex-wrapper">
 

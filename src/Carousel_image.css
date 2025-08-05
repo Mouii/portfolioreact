@@ -1,8 +1,8 @@
 .carousel {
     position: relative;
     max-width: 800px;
-    margin: 80px auto;
-    height: 400px;
+    margin: 50px auto;
+    height: 300px;
     perspective: 1000px;
     overflow: visible;
 }
@@ -16,42 +16,37 @@
 .carousel-img {
     position: absolute;
     top: 0;
+    left: 10%;
     width: 300px;
-    height: 100%;
+    height: 70%;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     transition: transform 0.8s ease, opacity 0.8s ease;
-    opacity: 0;
-    z-index: 0;
-    pointer-events: none;
 }
 
-.carousel-img.center {
-    left: 50%;
-    transform: translateX(-50%) scale(1.1);
+.carousel-img.first {
+    transform: translateX(10%) translateY(-15%) scale(1.1);
     opacity: 1;
     z-index: 3;
     pointer-events: auto;
 }
 
-.carousel-img.left {
-    left: 10%;
-    transform: rotateY(25deg) scale(0.9);
-    opacity: 0.5;
-    z-index: 1;
+.carousel-img.second {
+    transform: translateX(50%) translateY(10%) scale(0.9);
+    opacity: 1;
+    z-index: 2;
 }
 
-.carousel-img.right {
-    right: 10%;
-    transform: rotateY(-25deg) scale(0.9);
-    opacity: 0.5;
+.carousel-img.third {
+    transform: translateX(100%) translateY(50%) scale(0.9);
+    opacity: 1;
     z-index: 1;
 }
 
 .carousel-btn {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     background-color: #ffffffcc;
     border: none;
@@ -64,11 +59,11 @@
 }
 
 .carousel-btn.left {
-    left: -40px;
+    left: 10px;
 }
 
 .carousel-btn.right {
-    right: -40px;
+    right: 10px;
 }
 
 .carousel-btn:hover {

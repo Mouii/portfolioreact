@@ -97,8 +97,7 @@ body.modal-open {
     font-size: 1.1rem;
     overflow-y: auto;
     max-height: 78vh; /* Adjust based on your visual preference */
-    padding-right: 110px; /* Space for scrollbar */
-    padding-left: 110px;
+    padding : 0rem 7rem 0rem 7rem;
     z-index: 10;
 }
 
@@ -176,7 +175,7 @@ body.modal-open {
   top : 0%;
   left: 50%;
   width: 100px;
-  animation: sealLift 1.1s ease-out forwards;
+  animation: sealLift 1.5s ease-out forwards;
   z-index: 2;
 }
 
@@ -185,7 +184,7 @@ body.modal-open {
     transform: translate(-50%, 0%) scale(1);
   }
   100% {
-    transform: translate(-50%, 620%) scale(1);
+    transform: translate(-50%, 800%) scale(1);
   }
 }
 

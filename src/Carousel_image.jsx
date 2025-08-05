@@ -24,7 +24,7 @@ function Carousel_image({images, onImageClick}) {
                 if (![active, prevIndex, nextIndex].includes(i)) return null;
 
                 const position =
-                    i === active ? "center" : i === prevIndex ? "left" : "right";
+                    i === active ? "first" : i === prevIndex ? "third" : "second";
 
                 return (
                     <motion.img
@@ -32,9 +32,7 @@ function Carousel_image({images, onImageClick}) {
                     src={src}
                     alt={`carousel-${i}`}
                     className={`carousel-img ${position}`}
-                    onClick={() => position === "center" && onImageClick(src, images)}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: position === "center" ? 1 : 0.6 }}
+                    onClick={() => position === "first" && onImageClick(src, images)}
                     transition={{ duration: 0.6 }}
                     />
                 );
