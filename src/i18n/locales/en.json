@@ -1,8 +1,9 @@
 {
-    "welcome": "👋 Welcome to my website, visitor. Check the campfire, the table, or the beds to make an action...",
+    "welcome": "👋 Welcome to my website, visitor. Check the campfire, the table, the waterfall, or the beds to make an action...",
     "contact": "Wanna contact me?",
     "projects": "Projects",
     "about" : "Who am I?",
+    "curriculumVitae" : "My path",
     "titleMotivation" : "Presentation",
     "motivation" : "Since the age of 6, I've been passionate about computers and software development. My dream? To step to the other side of the screen and create experiences that make users dream. This passion has guided all my decisions and shaped my career toward designing custom websites and applications.",
     "titleVision" : "My vision",

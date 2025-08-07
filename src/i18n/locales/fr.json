@@ -1,8 +1,9 @@
 {
-    "welcome": "👋 Bienvenue sur mon site, cher visiteur. Inspecte le feu de camp, les lits, ou la table pour effectuer une action...",
+    "welcome": "👋 Bienvenue sur mon site, cher visiteur. Inspecte le feu de camp, les lits, la cascade, ou la table pour effectuer une action...",
     "contact": "Voulez-vous prendre contact ?",
     "projects": "Projets",
     "about" : "Qui suis-je ?",
+    "curriculumVitae" : "Mon Parcours",
     "titleMotivation" : "Présentation",
     "motivation" : "Depuis l'âge de 6 ans, je suis passionné par l'informatique et le développement logiciel. Mon rêve ? Passer de l'autre côté de l'écran pour offrir aux utilisateurs des expériences qui les font rêver. C'est cette passion qui a guidé toutes mes décisions et orienté ma carrière vers la conception de sites web et d'applications sur mesure.",
     "titleVision" : "Ma vision",

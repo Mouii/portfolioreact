@@ -32,6 +32,15 @@
   clip-path: polygon(24% 9%, 78% 8%, 100% 95%, 2% 100%, 10% 57%);
 }
 
+.waterfall {
+  top: 47%;
+  left: 34%;
+  width: 29%;
+  height: 20%;
+  clip-path: polygon(29% 19%, 85% 22%, 91% 85%, 5% 85%);
+
+}
+
 .table {
   top: 73%;
   left: 25%;
@@ -262,6 +271,14 @@ body.modal-open {
       clip-path: polygon(15% 20%, 85% 19%, 100% 80%, 0% 80%);
   }
 
+  .waterfall {
+    top: 50%;
+    left: 31%;
+    width: 35%;
+    height: 14%;
+    clip-path: polygon(29% 19%, 85% 22%, 91% 85%, 5% 85%);
+  }
+
 }
 
 
@@ -299,4 +316,11 @@ body.modal-open {
     right: -2rem;
   }
 
+}
+
+@media (hover: hover) {
+  .highlight:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.1);
+  }
 }

@@ -16,6 +16,7 @@ import clickSound from "./sounds/parchment.mp3";
 const Home = () => {
 
     const { t } = useTranslation();
+    const { i18n } = useTranslation();
 
     const [openScroll, setOpenScroll] = useState(null);
     const [isClosing, setIsClosing] = useState(false);
@@ -91,6 +92,11 @@ const Home = () => {
         }
     };
 
+    const handlePDFOpening = () => {
+        const pdfUrl = `/assets/CV_Kévin_Prud'homme_${i18n.language === "en" ? "EN" : "FR"}.pdf`; // Replace with your actual PDF URL
+        window.open(pdfUrl, '_blank');
+    };
+
     const isPortrait = usePortrait()
     const srcImage = isPortrait ? ImageBackgroundPortrait : ImageBackground;
 
@@ -109,9 +115,10 @@ const Home = () => {
                 </button>
             </div>
 
-            <div className="highlight firecamp" tabindex="0" onClick={() => setOpenScroll("about")} data-tooltip-id="my-tooltip" data-tooltip-content={t("about")}/>
-            <div className="highlight table" tabindex="0" onClick={() => setOpenScroll("projects")} data-tooltip-id="my-tooltip" data-tooltip-content={t("projects")}/>
-            <div className="highlight beds" tabindex="0" onClick={() => setOpenScroll("contact")} data-tooltip-id="my-tooltip" data-tooltip-content={t("contact")}/>
+            <div className="highlight firecamp" tabIndex="0" onClick={() => setOpenScroll("about")} data-tooltip-id="my-tooltip" data-tooltip-content={t("about")}/>
+            <div className="highlight waterfall" tabIndex="0" onClick={() => handlePDFOpening()} data-tooltip-id="my-tooltip" data-tooltip-content={t("curriculumVitae")}/>
+            <div className="highlight table" tabIndex="0" onClick={() => setOpenScroll("projects")} data-tooltip-id="my-tooltip" data-tooltip-content={t("projects")}/>
+            <div className="highlight beds" tabIndex="0" onClick={() => setOpenScroll("contact")} data-tooltip-id="my-tooltip" data-tooltip-content={t("contact")}/>
             <Tooltip id="my-tooltip" />
             
             {openScroll && (
