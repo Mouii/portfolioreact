@@ -1,28 +1,32 @@
 .foot {
-  position: absolute;              /* anchors it to the screen bottom */
+  position: absolute;
   bottom: 1%;
   left: 50%;
-  background-color: rgba(0, 0, 0, 0.5); /* translucent black */
+  background-color: rgba(0, 0, 0, 0.5);
   color: #ccc;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: clamp(0.65rem, 1vw, 0.85rem); /* scales between ~10px and ~13.6px */
   font-family: Georgia, serif;
-  padding: 10px 0;
-  z-index: 2;                /* above all other elements */
-  pointer-events: none;        /* optional: allows clicks to pass through */
+  padding: 0.625rem 0; /* ~10px top/bottom */
+  z-index: 2;
+  pointer-events: none;
   transform: translateX(-50%);
+  width: 100%;
+  max-width: 31.25rem; /* ~500px */
 }
 
-@media only screen and (max-width: 480px) and (orientation: portrait) {
+/* 📱 Mobile Portrait */
+@media (max-width: 480px) and (orientation: portrait) {
   .foot {
-    font-size: 3px;
+    font-size: clamp(0.4rem, 2vw, 0.6rem); /* scales between ~6.4px and ~9.6px */
+    padding: 0.25rem 0; 
   }
 }
 
-@media only screen and (max-width: 768px) and (orientation: landscape) {
+/* 📱 Tablet Landscape */
+@media (max-width: 768px) and (orientation: landscape) {
   .foot {
-    font-size: 9px;
-    padding: 5px 0px;
-    width: 500px;
+    font-size: clamp(0.6rem, 1.5vw, 0.75rem); /* scales between ~9.6px and ~12px */
+    padding: 0.3125rem 0; /* ~5px top/bottom */
   }
 }

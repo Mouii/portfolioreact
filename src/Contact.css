@@ -1,22 +1,23 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  gap: 1rem; /* ~16px */
+  max-width: 37.5rem; /* ~600px */
+  padding: 1.25rem; /* ~20px */
+  border-radius: 0.5rem;
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.5);
 }
 
 .contact-form label {
   font-weight: 600;
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px;
+  padding: 0.75rem; /* ~12px */
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   font-size: 1rem;
   resize: vertical;
 }
@@ -24,9 +25,9 @@
 .contact-form button {
   background: #0066ff;
   color: white;
-  padding: 12px;
+  padding: 0.75rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -40,15 +41,15 @@
   font-size: 0.85rem;
   text-align: right;
   color: #555;
-  margin-top: -12px;
-  margin-bottom: 4px;
+  margin-top: -0.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .error {
   color: crimson;
   font-size: 0.85rem;
-  margin-top: -8px;
-  margin-bottom: 8px;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact-flex-wrapper {
@@ -56,31 +57,46 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  gap: 10px;
+  gap: 0.625rem; /* ~10px */
   position: relative;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
 .form-center {
-  max-width: 600px;
+  max-width: 37.5rem;
   flex: 1;
   z-index: 2;
 }
 
 .side-image {
-  max-width: 200px;
+  max-width: 12.5rem; /* ~200px */
   flex-shrink: 0;
   z-index: 1;
+}
 
-  &.secondo {
-    margin-left: -36px;
-    scale: 0.9;
-  }
-
+.side-image.secondo {
+  margin-left: -2.25rem; /* ~-36px */
+  transform: scale(0.9);
 }
 
 .side-image img {
   width: 100%;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 0.25rem 1rem rgba(0, 0, 0, 0.25));
+}
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+
+  .side-image {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+  .side-image {
+    display: none;
+  }
 }

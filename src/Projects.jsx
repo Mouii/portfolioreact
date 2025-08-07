@@ -120,35 +120,35 @@ function Projects() {
         <div className="ProjectText">{t("projectTips")}</div>
       </div>
       <div>
-        <div className="title">{t("sopraTitle")}</div>
+        <div className="smallTitle">{t("sopraTitle")}</div>
         <div className="type">{t("projectTypePro")}</div>
         <Carousel_image images={AcaciaGaminImages} onImageClick={openZoom}/>
         <div className="ProjectText">{t("sopraDescription")}</div>
         <div className="stateProject">{t("projectStatement")} {t("projectStatementOngoing")}</div>
       </div>
       <div>
-        <div className="title">{t("hanoiTitle")}</div>
+        <div className="smallTitle">{t("hanoiTitle")}</div>
         <div className="type">{t("projectTypeInterview")}</div>
         <Carousel_image images={HanoiImages} onImageClick={openZoom}/>
         <div className="ProjectText">{t("hanoiDescription")}</div>
         <div className="stateProject">{t("projectStatement")} {t("projectStatementCompleted")}</div>
       </div>
       <div>
-        <div className="title">{t("werewolfAngularTitle")}</div>
+        <div className="smallTitle">{t("werewolfAngularTitle")}</div>
         <div className="type">{t("projectTypePersonal")}</div>
         <Carousel_image images={WereWolveAngularImages} onImageClick={openZoom}/>
         <div className="ProjectText">{t("werewolfAngularDescription")}</div>
         <div className="stateProject">{t("projectStatement")} {t("projectStatementCompleted")}</div>
       </div>
       <div>
-        <div className="title">{t("werewolfKotlinTitle")}</div>
+        <div className="smallTitle">{t("werewolfKotlinTitle")}</div>
         <div className="type">{t("projectTypePersonal")}</div>
         <Carousel_image images={WerewolveKotlinImages} onImageClick={openZoom}/>
         <div className="ProjectText">{t("werewolfKotlinDescription")}</div>
         <div className="stateProject">{t("projectStatement")} {t("projectStatementCompleted")}</div>
       </div>
       <div>
-        <div className="title">{t("portfolioTitle")}</div>
+        <div className="smallTitle">{t("portfolioTitle")}</div>
         <div className="type">{t("projectTypePersonal")}</div>
         <Carousel_image images={PortfolioImages} onImageClick={openZoom}/>
         <div className="ProjectText">{t("portfolioDescription")}</div>

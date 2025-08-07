@@ -1,5 +1,6 @@
 import {useState, useRef, useEffect} from "react";
 import ImageBackground from "./images/background.webp";
+import ImageBackgroundPortrait from "./images/background_vertical.png";
 import ImageSeal from "./images/seal.webp";
 import "./Home.css";
 import Projects from "./Projects";
@@ -25,6 +26,19 @@ const Home = () => {
     const clickRef = useRef(null);
     const [muted, setMuted] = useState(true);
       
+    const usePortrait = () => {
+        const [isPortrait, setIsPortrait] = useState(window.matchMedia("(orientation: portrait)").matches);
+
+        useEffect(() => {
+            const mediaQuery = window.matchMedia("(orientation: portrait)");
+            const handler = (e) => setIsPortrait(e.matches);
+            mediaQuery.addEventListener("change", handler);
+            return () => mediaQuery.removeEventListener("change", handler);
+        }, []);
+
+        return isPortrait;
+    };
+
     const handleClose = () => {
         setIsClosing(true);
         setScrollReady(false);
@@ -77,12 +91,15 @@ const Home = () => {
         }
     };
 
+    const isPortrait = usePortrait()
+    const srcImage = isPortrait ? ImageBackgroundPortrait : ImageBackground;
+
     return (
         <div className="wrapper">
             
             <Header />
             
-            <img src={ImageBackground} alt="background" className="background" /> 
+            <img src={srcImage} alt="background" className="background" /> 
 
             <div className="sound-control">
                 <audio ref={bgRef} src={bgSound} />
@@ -92,9 +109,9 @@ const Home = () => {
                 </button>
             </div>
 
-            <div className="highlight firecamp" onClick={() => setOpenScroll("about")} data-tooltip-id="my-tooltip" data-tooltip-content={t("about")}/>
-            <div className="highlight table" onClick={() => setOpenScroll("projects")} data-tooltip-id="my-tooltip" data-tooltip-content={t("projects")}/>
-            <div className="highlight beds" onClick={() => setOpenScroll("contact")} data-tooltip-id="my-tooltip" data-tooltip-content={t("contact")}/>
+            <div className="highlight firecamp" tabindex="0" onClick={() => setOpenScroll("about")} data-tooltip-id="my-tooltip" data-tooltip-content={t("about")}/>
+            <div className="highlight table" tabindex="0" onClick={() => setOpenScroll("projects")} data-tooltip-id="my-tooltip" data-tooltip-content={t("projects")}/>
+            <div className="highlight beds" tabindex="0" onClick={() => setOpenScroll("contact")} data-tooltip-id="my-tooltip" data-tooltip-content={t("contact")}/>
             <Tooltip id="my-tooltip" />
             
             {openScroll && (

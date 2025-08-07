@@ -1,23 +1,40 @@
 .title {
-    font-size: 35px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    padding: 10px 0px 10px 0px;
+  font-size: clamp(1.8rem, 3vw, 2.2rem); /* scales between 28px and 35px */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.625rem 0; /* 10px top/bottom */
+}
+
+.smallTitle {
+  font-size: clamp(1.4rem, 2.9vw, 1.8rem); /* scales between 28px and 35px */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.625rem 0; /* 10px top/bottom */
 }
 
 .text {
-    font-size: 16px;
-    margin: auto;
-    text-align: justify;
-    font-family: 'Roboto', sans-serif;
-    padding: 10px 30px 10px 30px;
+  font-size: clamp(1rem, 2vw, 1.125rem); /* scales between 16px and 18px */
+  margin: 0 auto;
+  text-align: justify;
+  font-family: 'Roboto', sans-serif;
+  padding: 0.625rem 1.875rem; /* 10px top/bottom, 30px sides */
 }
 
 .liTitle {
-    font-size: 20px;
-    margin: auto;
-    text-align: justify;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    padding: 5px 0px 5px 0px;
+  font-size: clamp(1.125rem, 2.5vw, 1.25rem); /* scales between 18px and 20px */
+  margin: 0 auto;
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 0.3125rem 0; /* 5px top/bottom */
+}
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  .text {
+    padding : 0.625rem 0;
+  }
+
+  ul {
+    padding-inline-start : 0;
+  }
 }

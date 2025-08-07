@@ -1,177 +1,165 @@
 .wrapper {
-    position: relative;
-    width: inherit;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .background {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-.highlight {
-    position: absolute;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-.highlight:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.01);
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Polygonal clickable zones — adjust coordinates as needed */
+.highlight {
+  position: absolute;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
 
+.highlight:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Polygonal clickable zones */
 .firecamp {
-    top: 57%;
-    left: 3%;
-    width: 16%;
-    height: 18%;
-    clip-path: polygon(24% 9%, 78% 8%, 100% 95%, 2% 100%, 10% 57%);
+  top: 57%;
+  left: 3%;
+  width: 16%;
+  height: 18%;
+  clip-path: polygon(24% 9%, 78% 8%, 100% 95%, 2% 100%, 10% 57%);
 }
 
 .table {
-    top: 73%;
-    left: 25%;
-    width: 47%;
-    height: 14%;
-    clip-path: polygon(15% 20%, 87% 19%, 100% 80%, 0% 80%);
+  top: 73%;
+  left: 25%;
+  width: 47%;
+  height: 14%;
+  clip-path: polygon(15% 20%, 87% 19%, 100% 80%, 0% 80%);
 }
 
 .beds {
-    top: 57%;
-    left: 69%;
-    width: 29%;
-    height: 20%;
-    clip-path: polygon(0 0, 96% 0%, 88% 100%, 11% 88%);
+  top: 57%;
+  left: 69%;
+  width: 29%;
+  height: 20%;
+  clip-path: polygon(0 0, 96% 0%, 88% 100%, 11% 88%);
 }
 
 .scroll-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.3); /* add a dim veil */
-    backdrop-filter: blur(2px);          /* optional: soft background blur */
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 900;              /* high enough to sit above everything */
-    pointer-events: all;        /* absorb pointer events */
-    
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 900;
+  pointer-events: all;
 }
-  
+
 .scroll-box {
-    background-image: url("./images/scroll_page.webp");
-    background-size: cover;           /* makes it fill the whole box */
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 1000px;
-    height: auto;                     /* can grow with content */
-    min-height: 500px;
-
-    padding: 40px;
-    position: relative;
-    animation: scrollOpen 0.4s ease-out;
-
-    display: flex;
-    flex-direction: column;
+  background-image: url("./images/scroll_page.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 90vw;
+  max-width: 1000px;
+  min-height: 500px;
+  padding: 2.5rem;
+  position: relative;
+  animation: scrollOpen 0.4s ease-out;
+  display: flex;
+  flex-direction: column;
 }
 
 body.modal-open {
-    overflow: hidden;       /* Prevents scrolling */
-    touch-action: none;     /* Prevents mobile scroll/gesture */
-    position: relative;        /* Locks layout position */
-    width: 100%;
-  }
+  overflow: hidden;
+  touch-action: none;
+  position: relative;
+  width: 100%;
+}
 
 .scroll-content {
-    color: #3b2f1f;
-    font-family: 'Georgia', serif;
-    font-size: 1.1rem;
-    overflow-y: auto;
-    max-height: 35rem;
-    padding : 0rem 8rem 0rem 8rem;
-    z-index: 10;
+  color: #3b2f1f;
+  font-family: 'Georgia', serif;
+  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  overflow-y: auto;
+  max-height: 35rem;
+  padding: 0 7rem;
+  z-index: 10;
 }
 
 .scroll-content::-webkit-scrollbar {
-    width: 8px;
-}
-
-.scroll-content::-webkit-scrollbar-track {
-    background: transparent;
+  width: 8px;
 }
 
 .scroll-content::-webkit-scrollbar-thumb {
-    background-color: rgba(120, 90, 40, 0.5);
-    border-radius: 4px;
+  background-color: rgba(120, 90, 40, 0.5);
+  border-radius: 4px;
 }
 
 .close-btn {
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    background: none;
-    border: none;
-    font-size: 1.4rem;
-    color: #fff;
-    cursor: pointer;
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
 }
 
 @keyframes scrollOpen {
-    from {
-        transform: scale(0.85);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-@keyframes scrollUnroll {
-    0% {
-      transform: scaleY(0.1);
-      opacity: 0;
-      transform-origin: top center;
-    }
-    100% {
-      transform: scaleY(1);
-      opacity: 1;
-      transform-origin: top center;
-    }
-  }
-  
-  @keyframes scrollRollBack {
-    0% {
-      transform: scaleY(1);
-      opacity: 1;
-      transform-origin: bottom center;
-    }
-    100% {
-      transform: scaleY(0.1);
-      opacity: 0;
-      transform-origin: bottom center;
-    }
-  }
-  
 .scroll-box.roll-in {
-  animation: scrollUnroll 1.0s ease-out forwards;
+  animation: scrollUnroll 1s ease-out forwards;
 }
 
 .scroll-box.roll-out {
   animation: scrollRollBack 0.5s ease-in forwards;
 }
 
+@keyframes scrollUnroll {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 0;
+    transform-origin: top center;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+    transform-origin: top center;
+  }
+}
+
+@keyframes scrollRollBack {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+    transform-origin: bottom center;
+  }
+  100% {
+    transform: scaleY(0.1);
+    opacity: 0;
+    transform-origin: bottom center;
+  }
+}
+
 .seal {
   position: absolute;
-  top : 0%;
+  top: 0;
   left: 50%;
   width: 100px;
   animation: sealLift 1.5s ease-out forwards;
@@ -183,76 +171,132 @@ body.modal-open {
     transform: translate(-50%, 0%) scale(1);
   }
   100% {
-    transform: translate(-50%, 800%) scale(1);
+    transform: translate(-50%, 900%) scale(1);
     display: none;
   }
 }
 
 .sound-control {
   position: fixed;
-  top: 12px;
+  top: 0.75rem;
+  left: 1rem;
   z-index: 10;
 }
 
 .sound-control button {
-  margin-left: 8px;
   font-size: 0.85rem;
   background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
-  padding: 6px 10px;
+  padding: 0.4rem 0.6rem;
   border-radius: 6px;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
+  
+  /* 🔊 Sound control: scaled and repositioned */
   .sound-control {
-    top: 5px;
-    left: -15px;
-    scale: 0.5;
+    position: absolute;
+    top: 0.5rem;
+    left: -1rem;
+    transform: scale(0.5);
   }
 
-  .scroll-overlay {
-    scale: 0.3;
-    top: -230px;
-    width: 1340px;
-    transform: translateX(-117%);
-  }
-
+  /* 📦 Scroll box: responsive width */
   .scroll-box {
-    width: 760px;
+    scale: 0.8;
+    top: 5%;
+  }
+
+  .seal {
+    scale: 0.8;
+    left : 45%;
+  }
+
+  /* 📜 Scroll content: flexible sizing */
+  .scroll-content {
+    width: 100%;
+    max-width: 20rem;
+    max-height: 30rem;
+    margin: 4rem 0;
+    overflow-y: auto;
+    padding : 0;
+  }
+
+  .close-btn {
+    top: 2rem;
+    right: -2rem;
+  }
+
+
+  /* ❌ Hide tooltips on small portrait screens */
+  .react-tooltip {
+    display: none !important;
+  }
+
+  /* Fire camp on small portrait screens */
+  .firecamp {
+    top: 55%;
+    left: -1%;
+    width: 21%;
+    height: 20%;
+    clip-path: polygon(24% 7%, 69% 8%, 100% 84%, 2% 83%, 2% 57%);
+  }
+
+  /* beds on small portrait screens */
+  .beds {
+      top: 54%;
+      left: 74%;
+      width: 27%;
+      height: 20%;
+      clip-path: polygon(0% 0%, 95% 0%, 86% 88%, 16% 82%);
+  }
+
+  /* table on small portrait screens */
+  .table {
+      top: 73%;
+      left: 8%;
+      width: 88%;
+      height: 17%;
+      clip-path: polygon(15% 20%, 85% 19%, 100% 80%, 0% 80%);
+  }
+
+}
+
+
+/* Responsive tweaks */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .scroll-box {
+    scale: 0.4;
+    top: 70%;
+  }
+
+  .seal {
+    scale: 0.5;
+    left: 45%;
+    top: -10%;
   }
 
   .scroll-content {
-    width: 520px;
+    padding: 0 2rem;
     max-height: 30rem;
-    margin: 40px 0px;
+    margin: 3rem 0;
   }
 
-  .react-tooltip {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 768px) and (orientation: landscape) {
   .sound-control {
-    scale: 0.7;
-  }
-
-  .scroll-overlay {
-    scale: 0.6;
-    top: -102px;
-    height: 510px;
-    width: 1077px;
-    left : -215px;
-  }
-
-  .scroll-box {
-    scale: 0.7;
-    top: 100px;
+    top: 0.5rem;
+    left: 0.5rem;
+    transform: scale(0.8);
   }
 
   .react-tooltip {
     display: none;
   }
+
+  .close-btn {
+    top: 2rem;
+    right: -2rem;
+  }
+
 }

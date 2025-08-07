@@ -1,99 +1,114 @@
 .carousel {
-    position: relative;
-    max-width: 800px;
-    margin: 50px auto;
-    height: 300px;
-    perspective: 1000px;
-    overflow: visible;
+  position: relative;
+  max-width: 50rem; /* ~800px */
+  margin: 3rem auto; /* ~50px top/bottom */
+  height: 18.75rem; /* ~300px */
+  perspective: 1000px;
+  overflow: visible;
+  padding: 0 2rem;
 }
 
 .carousel-track {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-img {
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 300px;
-    height: 70%;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.8s ease, opacity 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: clamp(16rem, 30vw, 18.75rem); /* scales between ~256px and 300px */
+  height: 70%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
 .carousel-img.first {
-    transform: translateX(10%) translateY(-15%) scale(1.1);
-    opacity: 1;
-    z-index: 3;
-    pointer-events: auto;
+  transform: translateX(10%) translateY(-15%) scale(1.1);
+  opacity: 1;
+  z-index: 3;
+  pointer-events: auto;
 }
 
 .carousel-img.second {
-    transform: translateX(50%) translateY(10%) scale(0.9);
-    opacity: 1;
-    z-index: 2;
+  transform: translateX(50%) translateY(10%) scale(0.9);
+  opacity: 1;
+  z-index: 2;
 }
 
 .carousel-img.third {
-    transform: translateX(100%) translateY(50%) scale(0.9);
-    opacity: 1;
-    z-index: 1;
+  transform: translateX(100%) translateY(50%) scale(0.9);
+  opacity: 1;
+  z-index: 1;
 }
 
 .carousel-btn {
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    background-color: #ffffffcc;
-    border: none;
-    border-radius: 50%;
-    padding: 12px 18px;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 5;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  padding: 0.75rem 1.125rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
+  z-index: 5;
 }
 
 .carousel-btn.left {
-    left: 10px;
+  left: 0.625rem;
 }
 
 .carousel-btn.right {
-    right: 10px;
+  right: 0.625rem;
 }
 
 .carousel-btn:hover {
-    background-color: #eee;
+  background-color: #eee;
 }
 
+/* 📱 Mobile Portrait */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
+  .carousel {
+    padding: 0 2rem;
+    margin: 1rem auto;
+    height: 15rem;
+  }
 
-    .carousel {
-        padding: 0rem 5rem;
-    }
+  .carousel-btn.left {
+    left: 0rem;
+    scale: 0.8;
+  }
 
-    .carousel-btn.left {
-        left: -30px;
-    }
+  .carousel-btn.right {
+    right: 0rem;
+    scale: 0.8;
+  }
 
-    .carousel-btn.right {
-        right: -30px;
-    }
+  .carousel-img {
+    left: -3.125rem;
+    scale: 0.6;
+  }
 
-    .carousel-img {
-        left: -50px;
-    }
+  .carousel-img.second {
+    transform: translateX(30%);
+  }
 
-    .carousel-img.second {
-        transform: translateX(30%) ;
-    }
+  .carousel-img.third {
+    transform: translateX(50%) translateY(20%);
+  }
+}
 
-    .carousel-img.third {
-        transform: translateX(50%) translateY(20%) ;
-    }
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .carousel-img.second {
+    transform: translateX(30%) translateY(10%) scale(0.9);
+  }
 
+  .carousel-img.third {
+    transform: translateX(40%) translateY(50%) scale(0.9);
+  }
 }
