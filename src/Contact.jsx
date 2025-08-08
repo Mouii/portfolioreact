@@ -75,13 +75,13 @@ const Contact = () => {
     <div className="title">{t("contactQuestion")}</div>
     <div className="text">{t("contactTips")}</div>
 
-    <div class="contact-flex-wrapper">
+    <div className="contact-flex-wrapper">
 
       <div className="side-image primo">
-        <img src={LeftContact} alt="left pointing" />
+        <img className="image-car" src={LeftContact} alt="left pointing" />
       </div>
 
-      <div class="form-center">
+      <div className="form-center">
         <form className="contact-form" onSubmit={handleSubmit} noValidate>
           <label htmlFor="name">{t("contactName")}</label>
           <input
@@ -143,7 +143,7 @@ const Contact = () => {
       </div>
 
       <div className="side-image secondo">
-        <img src={RightContact} alt="right pointing" />
+        <img className="image-car" src={RightContact} alt="right pointing" />
       </div>
 
     </div>
