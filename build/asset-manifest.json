@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.910550aa.css",
-    "main.js": "/static/js/main.41f9987b.js",
+    "main.css": "/static/css/main.5b1ef0d7.css",
+    "main.js": "/static/js/main.264f60d8.js",
     "static/js/488.6738d8a3.chunk.js": "/static/js/488.6738d8a3.chunk.js",
-    "static/media/nature.mp3": "/static/media/nature.b804fa246d384e7fbd01.mp3",
+    "static/media/background_vertical.png": "/static/media/background_vertical.8bfd8555553b39d38b27.png",
+    "static/media/nature.mp3": "/static/media/nature.c25f2ce9f567fa6a1a65.mp3",
     "static/media/left_contact.webp": "/static/media/left_contact.3a1e5213c92095a886a8.webp",
-    "static/media/background.webp": "/static/media/background.65eeddf27136b7d46e07.webp",
     "static/media/lg_kotlin_select.webp": "/static/media/lg_kotlin_select.3bd66ab6efc360c05099.webp",
     "static/media/right_contact.webp": "/static/media/right_contact.a7f9fc45def37e3609d4.webp",
     "static/media/lg_kotlin_dead.webp": "/static/media/lg_kotlin_dead.7838219e58a7b0bd0058.webp",
+    "static/media/background.webp": "/static/media/background.96eb692973e3ee281380.webp",
     "static/media/lg_angular_faq.webp": "/static/media/lg_angular_faq.d5da4cbe8b480e821d2f.webp",
     "static/media/lg_kotlin_faq.webp": "/static/media/lg_kotlin_faq.4eca7a19b0437e88480b.webp",
     "static/media/lg_angular_dead.webp": "/static/media/lg_angular_dead.3ee280785be14b6a507e.webp",
@@ -39,12 +40,12 @@
     "static/media/english.webp": "/static/media/english.3f382a8e19d40e625bb5.webp",
     "static/media/french.webp": "/static/media/french.ca99bc430df709517253.webp",
     "index.html": "/index.html",
-    "main.910550aa.css.map": "/static/css/main.910550aa.css.map",
-    "main.41f9987b.js.map": "/static/js/main.41f9987b.js.map",
+    "main.5b1ef0d7.css.map": "/static/css/main.5b1ef0d7.css.map",
+    "main.264f60d8.js.map": "/static/js/main.264f60d8.js.map",
     "488.6738d8a3.chunk.js.map": "/static/js/488.6738d8a3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.910550aa.css",
-    "static/js/main.41f9987b.js"
+    "static/css/main.5b1ef0d7.css",
+    "static/js/main.264f60d8.js"
   ]
 }
