@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import "./Carousel_image.css";
+import "./Carousel_Image.css";
 
-function Carousel_image({images, onImageClick}) {
+function Carousel_Image({images, onImageClick}) {
     const [active, setActive] = useState(0);
 
     const prevIndex = (active + images.length - 1) % images.length;
@@ -43,4 +43,4 @@ function Carousel_image({images, onImageClick}) {
     );
 }
 
-export default Carousel_image;
+export default Carousel_Image;

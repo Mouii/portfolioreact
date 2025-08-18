@@ -6,11 +6,6 @@ import HanoiMenu from "./images/hanoi_menu.webp";
 import HanoiBasic from "./images/hanoi_basic.webp";
 import HanoiSurvival from "./images/hanoi_survival.webp";
 
-import AcaciaBefore from "./images/acacia_original.webp";
-import AcaciaAfter from "./images/acacia_new.webp";
-import GaminBefore from "./images/gamin_original.webp";
-import GaminAfter from "./images/gamin_new.webp";
-
 import WereAngMenu from "./images/lg_angular_menu.webp";
 import WereAngAbout from "./images/lg_angular_about.webp";
 import WereAngFAQ from "./images/lg_angular_faq.webp";
@@ -35,18 +30,11 @@ import PortFolioContact from "./images/portfolio_contact.webp";
 
 import { motion, AnimatePresence } from "framer-motion";
 
-import Carousel_image from "./Carousel_image";
+import Carousel_Image from "./Carousel_Image";
 
 import { useTranslation } from "react-i18next";
 
 function Projects() {
-
-  const AcaciaGaminImages = [
-    AcaciaBefore,
-    AcaciaAfter,
-    GaminBefore,
-    GaminAfter
-  ];
 
   const HanoiImages = [
     HanoiMenu,
@@ -120,37 +108,30 @@ function Projects() {
         <div className="ProjectText">{t("projectTips")}</div>
       </div>
       <div>
-        <div className="smallTitle">{t("sopraTitle")}</div>
-        <div className="type">{t("projectTypePro")}</div>
-        <Carousel_image images={AcaciaGaminImages} onImageClick={openZoom}/>
-        <div className="ProjectText">{t("sopraDescription")}</div>
-        <div className="stateProject">{t("projectStatement")} {t("projectStatementOngoing")}</div>
-      </div>
-      <div>
         <div className="smallTitle">{t("hanoiTitle")}</div>
         <div className="type">{t("projectTypeInterview")}</div>
-        <Carousel_image images={HanoiImages} onImageClick={openZoom}/>
+        <Carousel_Image images={HanoiImages} onImageClick={openZoom}/>
         <div className="ProjectText">{t("hanoiDescription")}</div>
         <div className="stateProject">{t("projectStatement")} {t("projectStatementCompleted")}</div>
       </div>
       <div>
         <div className="smallTitle">{t("werewolfAngularTitle")}</div>
         <div className="type">{t("projectTypePersonal")}</div>
-        <Carousel_image images={WereWolveAngularImages} onImageClick={openZoom}/>
+        <Carousel_Image images={WereWolveAngularImages} onImageClick={openZoom}/>
         <div className="ProjectText">{t("werewolfAngularDescription")}</div>
         <div className="stateProject">{t("projectStatement")} {t("projectStatementCompleted")}</div>
       </div>
       <div>
         <div className="smallTitle">{t("werewolfKotlinTitle")}</div>
         <div className="type">{t("projectTypePersonal")}</div>
-        <Carousel_image images={WerewolveKotlinImages} onImageClick={openZoom}/>
+        <Carousel_Image images={WerewolveKotlinImages} onImageClick={openZoom}/>
         <div className="ProjectText">{t("werewolfKotlinDescription")}</div>
         <div className="stateProject">{t("projectStatement")} {t("projectStatementCompleted")}</div>
       </div>
       <div>
         <div className="smallTitle">{t("portfolioTitle")}</div>
         <div className="type">{t("projectTypePersonal")}</div>
-        <Carousel_image images={PortfolioImages} onImageClick={openZoom}/>
+        <Carousel_Image images={PortfolioImages} onImageClick={openZoom}/>
         <div className="ProjectText">{t("portfolioDescription")}</div>
         <div className="stateProject">{t("projectStatement")} {t("projectStatementOngoing")}</div>
       </div>

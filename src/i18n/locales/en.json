@@ -50,8 +50,6 @@
     "projectStatementCompleted" : "Completed",
     "projectStatementOngoing" : "Ongoing",
     "projectStatement" : "Statement :",
-    "sopraTitle" : "Application migration within the telecommunications sector",
-    "sopraDescription" : "During my professional internship in the final year of my engineering studies, I contributed to the enhancement of these applications by migrating them from VB.Net to C#.Net. The main goal was to improve the design and provide a more intuitive user interface.",
     "hanoiTitle" : "Hanoï Tower",
     "hanoiDescription" : "During my application for a QML developer position (C++ backend, JavaScript frontend), the company challenged me to demonstrate my skills on a technology I was unfamiliar with. The lead developer set several minimum requirements, including building a functional Tower of Hanoi game with a counter and four disks. Additional optional features were later introduced. Through independent research, I developed an advanced version of the game supporting up to eight disks, drag-and-drop functionality, a challenge mode, a menu, and a victory animation. This project remains one of my proudest achievements and a testament to my ability to quickly learn and deliver high-quality solutions in unfamiliar environments.",
     "werewolfAngularTitle" : "Werewolves of Miller's Hollow utilities application from One Night/One Crepuscule",

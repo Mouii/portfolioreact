@@ -50,8 +50,6 @@
     "projectStatementCompleted" : "Accompli",
     "projectStatementOngoing" : "En cours",
     "projectStatement" : "Statut :",
-    "sopraTitle" : "Migration d'applications dans le secteur des télécommunications",
-    "sopraDescription" : "Au cours de mon contrat de professionnalisation durant ma dernière année d'études d'ingénieur, j'ai contribué à l'évolution de ces applications en assurant leur migration technologique de VB.Net vers C#.Net. L'objectif principal était d'améliorer le design et de rendre l'interface plus intuitive pour l'utilisateur.",
     "hanoiTitle" : "Tours d'Hanoï",
     "hanoiDescription" : "Lors de ma candidature pour un poste de développeur QML (C++ en back-end, JavaScript en front-end), l'entreprise m'a lancé un défi visant à évaluer mes compétences sur une technologie que je ne maîtrisais pas encore. Le développeur responsable a fixé plusieurs exigences minimales, notamment la réalisation d'un jeu des Tours d'Hanoï fonctionnel, avec un compteur et quatre disques. Par la suite, plusieurs fonctionnalités optionnelles ont été ajoutées. Grâce à mes recherches personnelles, j'ai pu développer une version avancée du jeu comprenant jusqu'à huit disques, un système de glisser-déposer, un mode challenge, un menu et une animation de victoire. Ce projet reste l'un de mes plus grands succès personnels et une preuve de ma capacité à apprendre rapidement et à créer des solutions de qualité, même en terrain inconnu.",
     "werewolfAngularTitle" : "Utilitaire Loup-Garous de Thiercelieux depuis Une Nuit/Un Crépuscule",
