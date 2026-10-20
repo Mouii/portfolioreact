@@ -34,7 +34,7 @@ import PortFolioContact from './images/portfolio_contact.webp';
 
 import { motion, AnimatePresence } from 'framer-motion';
 
-import Carousel_Image from './Carousel_Image';
+import CarouselImg from './CarouselImg.jsx';
 
 import { useTranslation } from 'react-i18next';
 
@@ -105,7 +105,7 @@ function Projects() {
             <div>
                 <div className='smallTitle'>{t('hanoiTitle')}</div>
                 <div className='type'>{t('projectTypeInterview')}</div>
-                <Carousel_Image
+                <CarouselImg
                     images={HanoiImages}
                     onImageClick={openZoom}
                 />
@@ -117,7 +117,7 @@ function Projects() {
             <div>
                 <div className='smallTitle'>{t('werewolfAngularTitle')}</div>
                 <div className='type'>{t('projectTypePersonal')}</div>
-                <Carousel_Image
+                <CarouselImg
                     images={WereWolveAngularImages}
                     onImageClick={openZoom}
                 />
@@ -131,7 +131,7 @@ function Projects() {
             <div>
                 <div className='smallTitle'>{t('werewolfKotlinTitle')}</div>
                 <div className='type'>{t('projectTypePersonal')}</div>
-                <Carousel_Image
+                <CarouselImg
                     images={WerewolveKotlinImages}
                     onImageClick={openZoom}
                 />
@@ -145,7 +145,7 @@ function Projects() {
             <div>
                 <div className='smallTitle'>{t('tourismTitle')}</div>
                 <div className='type'>{t('projectTypePro')}</div>
-                <Carousel_Image
+                <CarouselImg
                     images={TourismImages}
                     onImageClick={openZoom}
                 />
@@ -157,7 +157,7 @@ function Projects() {
             <div>
                 <div className='smallTitle'>{t('portfolioTitle')}</div>
                 <div className='type'>{t('projectTypePersonal')}</div>
-                <Carousel_Image
+                <CarouselImg
                     images={PortfolioImages}
                     onImageClick={openZoom}
                 />
